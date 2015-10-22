@@ -2,10 +2,7 @@ package com.epam.environments;
 
 import com.epam.enums.Feeds;
 import com.epam.feeds.Feed;
-import com.epam.feeds.qa.PlaFeedQA;
-import com.epam.feeds.qa.SearchAndPromoteBannerQA;
-import com.epam.feeds.qa.SearchAndPromoteBundleQA;
-import com.epam.feeds.qa.SearchAndPromoteProductsQA;
+import com.epam.feeds.qa.*;
 import org.apache.commons.net.ftp.FTPClient;
 
 /**
@@ -28,6 +25,8 @@ public class QAEnvironment extends Environment {
 				return new SearchAndPromoteBundleQA(ftpClient);
 			case SAndPProducts:
 				return new SearchAndPromoteProductsQA(ftpClient);
+			case AdobeFeed:
+				return new AdobeFeedQA(ftpClient);
 			default:
 				throw new UnsupportedOperationException("no current implementation");
 		}

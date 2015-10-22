@@ -12,7 +12,7 @@ import java.util.Map;
 public class AdobeFeedUAT2 extends Feed {
 
 	private static final String PATH_TO_FILE = "/adobe-recs/uat2/";
-	private static final String FEED_NAME_NOTIFICATION = "Uat2 production adobe feed file ";
+	private static final String FEED_NAME_NOTIFICATION = "adobe";
 	private static final String FILE_NAME = "SPCK_RECS.csv";
 
 

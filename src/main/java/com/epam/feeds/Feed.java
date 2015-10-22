@@ -3,7 +3,6 @@ package com.epam.feeds;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -16,7 +15,7 @@ import java.util.Map;
 public abstract class Feed {
 
 	FTPClient ftpClient;
-	Map<String, String> adobeFeed = new HashMap<String, String>();
+	Map<String, String> feed = new HashMap<String, String>();
 
 	public Feed(FTPClient ftpClient) {
 		this.ftpClient = ftpClient;
@@ -27,16 +26,16 @@ public abstract class Feed {
 			List<FTPFile> files = Arrays.asList(ftpClient.listFiles(path));
 			for (FTPFile file : files) {
 				if (file.getName().equals(fileName)) {
-					adobeFeed.put(notificationMessage, file.toString());
+					feed.put(notificationMessage, file.toString());
 				}
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		if (adobeFeed.isEmpty()) {
-			adobeFeed.put(notificationMessage, " wasn't found");
+		if (feed.isEmpty()) {
+			feed.put(notificationMessage, " wasn't found");
 		}
-		return adobeFeed;
+		return feed;
 	}
 
 	public abstract Map<String, String> getFeedInfo();

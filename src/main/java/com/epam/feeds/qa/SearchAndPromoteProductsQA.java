@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class SearchAndPromoteProductsQA extends Feed {
 	private static final String PATH_TO_FILE = "/search-and-promote-feed/prod/";
-	private static final String FEED_NAME_NOTIFICATION = "S&P qa full feed file ";
+	private static final String FEED_NAME_NOTIFICATION = "full";
 	private static final String FILE_NAME = "product-feed-full.xml";
 
 	public SearchAndPromoteProductsQA(FTPClient ftpClient) {

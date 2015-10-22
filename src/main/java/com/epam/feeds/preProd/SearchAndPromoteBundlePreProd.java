@@ -11,7 +11,7 @@ import java.util.Map;
 public class SearchAndPromoteBundlePreProd extends Feed {
 
 	private static final String PATH_TO_FILE = "/search-and-promote-feed/pre-prod/";
-	private static final String FEED_NAME_NOTIFICATION = "S&P production feed file ";
+	private static final String FEED_NAME_NOTIFICATION = "bundle";
 	private static final String FILE_NAME = "bundle-feed-full.xml";
 
 	public SearchAndPromoteBundlePreProd(FTPClient ftpClient) {

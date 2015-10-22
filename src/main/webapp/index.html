@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+	<head>
+		<title>FeedChecker</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	</head>
+	<body>
+		<h3> feed checker </h3>
+		<select id="env">
+			<option id="prod">prod</option>
+			<option id="uat2">uat2</option>
+			<option id="preprod">preprod</option>
+			<option id="qa">qa</option>
+		</select>
+		<button id="get" >getFeedsInfo</button>
+		<h4>result</h4>
+		<p>Adobe feed</p>
+		<div id="adobe"></div>
+		<p>PLA feed</p>
+		<div id="pla"></div>
+		<p>S&P banner feed</p>
+		<div id="banner"></div>
+		<p>S&P bundle feed</p>
+		<div id="bundle"></div>
+		<p>S&P full feed</p>
+		<div id="full"></div>
+	</body>
+	<script src="/libs/jquery-1.8.1.min.js"></script>
+	<script type="text/javascript">
+	    document.getElementById("get").onclick = function(){
+	    environmentUrl = document.getElementById("env").value;
+	    $.get( environmentUrl, function( responseData ) {
+	        document.getElementById('adobe').innerHTML = responseData['adobe'];
+	        document.getElementById('pla').innerHTML = responseData['pla'];
+	        document.getElementById('banner').innerHTML = responseData['banner'];
+	        document.getElementById('bundle').innerHTML = responseData['bundle'];
+	        document.getElementById('full').innerHTML = responseData['full'];
+	});
+	    }
+	</script>
+</html>

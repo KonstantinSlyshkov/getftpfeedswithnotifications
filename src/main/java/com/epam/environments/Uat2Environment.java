@@ -2,10 +2,7 @@ package com.epam.environments;
 
 import com.epam.enums.Feeds;
 import com.epam.feeds.Feed;
-import com.epam.feeds.Uat2.PlaFeedUat2;
-import com.epam.feeds.Uat2.SearchAndPromoteBannerUAT2;
-import com.epam.feeds.Uat2.SearchAndPromoteBundleUat2;
-import com.epam.feeds.Uat2.SearchAndPromoteProductsUat2;
+import com.epam.feeds.Uat2.*;
 import org.apache.commons.net.ftp.FTPClient;
 
 /**
@@ -27,6 +24,8 @@ public class Uat2Environment extends Environment {
 				return new SearchAndPromoteBundleUat2(ftpClient);
 			case SAndPProducts:
 				return new SearchAndPromoteProductsUat2(ftpClient);
+			case AdobeFeed:
+				return new AdobeFeedUAT2(ftpClient);
 			default:
 				throw new UnsupportedOperationException("no current implementation");
 		}

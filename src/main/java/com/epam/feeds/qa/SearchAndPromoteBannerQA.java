@@ -11,7 +11,7 @@ import java.util.Map;
  */
 public class SearchAndPromoteBannerQA extends Feed {
 	private static final String PATH_TO_FILE = "/search-and-promote-feed/qa/";
-	private static final String FEED_NAME_NOTIFICATION = "S&P qa feed file ";
+	private static final String FEED_NAME_NOTIFICATION = "banner";
 	private static final String FILE_NAME = "banner-feed-full.xml";
 
 	public SearchAndPromoteBannerQA(FTPClient ftpClient) {

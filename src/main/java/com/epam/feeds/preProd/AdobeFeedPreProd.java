@@ -1,20 +1,20 @@
-package com.epam.feeds.prod;
+package com.epam.feeds.preProd;
 
 import com.epam.feeds.Feed;
 import org.apache.commons.net.ftp.FTPClient;
 
-import java.util.*;
+import java.util.Map;
 
 /**
- * Created by Kostiantyn_Slyshkov on 10/12/2015.
+ * Created by Kostiantyn_Slyshkov on 10/16/2015.
  */
-public class AdobeFeedProd extends Feed {
+public class AdobeFeedPreProd extends Feed {
 
-	private static final String PATH_TO_FILE = "/adobe-recs/prod/";
+	private static final String PATH_TO_FILE = "/adobe-recs/preprod/";
 	private static final String FEED_NAME_NOTIFICATION = "adobe";
 	private static final String FILE_NAME = "SPCK_RECS.csv";
 
-	public AdobeFeedProd(FTPClient ftpClient) {
+	public AdobeFeedPreProd(FTPClient ftpClient) {
 		super(ftpClient);
 	}
 
@@ -22,5 +22,4 @@ public class AdobeFeedProd extends Feed {
 	public Map<String, String> getFeedInfo() {
 		return super.getAdobeFeedFileProps(PATH_TO_FILE, FILE_NAME, FEED_NAME_NOTIFICATION);
 	}
-
 }

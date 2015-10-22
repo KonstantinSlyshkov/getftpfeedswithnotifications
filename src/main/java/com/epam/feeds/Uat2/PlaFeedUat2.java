@@ -12,7 +12,7 @@ import java.util.Map;
 public class PlaFeedUat2 extends Feed {
 
 	private static final String PATH_TO_FILE = "/google-pla/uat2/";
-	private static final String FEED_NAME_NOTIFICATION = "PLA uat2-production feed file ";
+	private static final String FEED_NAME_NOTIFICATION = "pla";
 	private static final String FILE_NAME = "SPCK_PLA_ACTIVE";
 
 	public PlaFeedUat2(FTPClient ftpClient) {

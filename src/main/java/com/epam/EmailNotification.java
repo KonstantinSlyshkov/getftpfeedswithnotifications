@@ -35,9 +35,9 @@ public class EmailNotification {
 		try {
 			message.saveChanges();
 			message.setFrom(new InternetAddress(from));
-			message.addRecipient(Message.RecipientType.TO, new InternetAddress(denis));
+/*			message.addRecipient(Message.RecipientType.TO, new InternetAddress(denis));
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(taras));
-			message.addRecipient(Message.RecipientType.TO, new InternetAddress(alex));
+			message.addRecipient(Message.RecipientType.TO, new InternetAddress(alex));*/
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(kot));
 			message.setSubject("Endaily feed notification");
 			message.setText(notification);

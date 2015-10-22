@@ -11,7 +11,7 @@ import java.util.Map;
  */
 public class PlaFeedPreProd extends Feed {
 	private static final String PATH_TO_FILE = "/google-pla/preprod/";
-	private static final String FEED_NAME_NOTIFICATION = "PLA pre-production feed file ";
+	private static final String FEED_NAME_NOTIFICATION = "pla";
 	private static final String FILE_NAME = "PreProd_SPCK_PLA.txt";
 
 	public PlaFeedPreProd(FTPClient ftpClient) {
