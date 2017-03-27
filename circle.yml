@@ -1,0 +1,13 @@
+machine:
+  java:
+    version: oraclejdk8
+
+test:
+  override:
+    - mvn test
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - mvn clean install
